@@ -56,6 +56,13 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
 const port = 9000;
 app.listen(port, () => {
+
   console.log("This for the testing");
+
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+function handleError(err, req, res, next) {
+  console.error(err);
+  res.status(500).send('Something went wrong');
+}
