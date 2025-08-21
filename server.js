@@ -56,5 +56,6 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
 const port = 9000;
 app.listen(port, () => {
+  console.log("This for the testing");
   console.log(`Server is running on http://localhost:${port}`);
 });
